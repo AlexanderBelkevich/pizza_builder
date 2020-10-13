@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #333 url(../images/pattern-body.jpg);
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.container {
+    width: 1170px;
+    margin: auto;
+}
+
+.container.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 30px;
+    align-items: self-start;
+}
+
+.container.grid.grid-50 {
+    grid-template-columns: 2fr 2fr;
+}
+
+.panel {
+    margin-bottom: 80px;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fdbc2c;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.panel-title__number {
+    color: #D94F2B;
+    display: inline-block;
+    margin-right: 55px;
+    font: 72px/1 Caveat;
+    vertical-align: middle;
+}
+
+.panel-heading {
+    padding-bottom: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container.grid {
+        grid-template-columns: 1fr;
+    }
+    .container.grid.grid-50 {
+        grid-template-columns: 1fr;
+    }
+    .panel-title {
+        font-size: 20px;
+    }
+    .panel-title__number {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+}
